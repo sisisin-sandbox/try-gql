@@ -7,16 +7,32 @@
   "license": "MIT",
   "scripts": {
     "prestart": "rm -rf .cache dist",
-    "start": "parcel ./src/index.html"
+    "start": "parcel ./src/index.html",
+    "gql:gen": "apollo client:codegen --target typescript --customScalarsPrefix=GitHub --globalTypesFile=src/types/__generated__/globalTypes.ts ",
+    "gql:dl": "apollo client:download-schema -c ./apollo.dl.config.js schema.graphql"
   },
   "devDependencies": {
     "@types/react": "^16.9.25",
     "@types/react-dom": "^16.9.5",
+    "apollo": "^2.28.3",
+    "dotenv": "^8.2.0",
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.8.3"
   },
   "dependencies": {
+    "@apollo/react-common": "^3.1.4",
+    "@apollo/react-hooks": "^3.1.5",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-error": "^1.1.13",
+    "apollo-link-http": "^1.5.17",
+    "graphql": "^14.6.0",
+    "graphql-tag": "^2.10.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "resolutions": {
+    "graphql": "^14.6.0"
   }
 }
