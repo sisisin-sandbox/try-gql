@@ -9,10 +9,15 @@
 
 export interface ListOrgs_viewer_organizations_nodes {
   __typename: "Organization";
+  id: string;
   /**
    * The organization's public profile name.
    */
   name: string | null;
+  /**
+   * The HTTP path for this organization.
+   */
+  resourcePath: GitHubURI;
 }
 
 export interface ListOrgs_viewer_organizations {

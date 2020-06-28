@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const QueryResult: React.FC<{ data: object; error?: object; loading: boolean }> = ({
-  data,
-  error,
-  loading,
-}) => {
+export const QueryResult: React.FC<{
+  data: object | undefined;
+  error?: object;
+  loading: boolean;
+}> = ({ data, error, loading }) => {
   if (loading) return <div>loading...</div>;
   if (error) {
     return (

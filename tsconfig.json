@@ -11,7 +11,9 @@
     "target": "es2018",
     "noEmit": true,
     "moduleResolution": "node",
-    "allowJs": true
+    "strict": true,
+    "allowJs": true,
+    "lib": ["ES2020"]
   },
   "include": ["src"]
 }
