@@ -1,0 +1,15 @@
+AllCops:
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - config.ru
+    - vendor/**/*
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 50
+Naming/MethodParameterName:
+  AllowedNames:
+    - e
