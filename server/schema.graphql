@@ -10,4 +10,16 @@ type Query {
   An example field added by the generator
   """
   testField: String!
+
+  """
+  user
+  """
+  user: User!
+}
+
+"""
+a user
+"""
+type User {
+  name: String!
 }

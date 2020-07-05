@@ -11,5 +11,10 @@ module Types
     def test_field
       'Hello World!'
     end
+
+    field :user, UserType, null: false, description: 'user'
+    def user
+      { name: 'chiyoko' }
+    end
   end
 end
